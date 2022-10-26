@@ -62,6 +62,17 @@ namespace SearchAlgorithm
                 {
                     if (item > arr[mid])
                         lowerbound = mid + 1;
+                    else
+                        upperbound = mid - 1;
+
+                    mid = (lowerbound + upperbound) / 2;
+                    ctr++;
+                }
+                if (item == arr[mid])
+                    Console.WriteLine("\n" + item.ToString() + "found at position"
+                        + (mid + 1).ToString());
+                else
+                    Console.WriteLine 
 
                 }
 
