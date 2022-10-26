@@ -80,6 +80,21 @@ namespace SearchAlgorithm
                 ch = char.Parse(Console.ReadLine().ToUpper());
             } while ((ch == 'y'));
         }
+        public void LinearSearch()
+        {
+            char ch;
+            //search for number of comparison
+            int ctr;
+            do
+            {
+                // Accept the number to the searched
+                Console.WriteLine("\nEnter the elements you want to search :");
+                int item = Convert.ToInt32(Console.ReadLine());
+
+                ctr = 0;
+
+            }
+        }
 
 
 
