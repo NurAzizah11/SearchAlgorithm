@@ -107,7 +107,7 @@ namespace SearchAlgorithm
                     Console.WriteLine("\n" + item.ToString()
                         + " not found in the array ");
                 Console.WriteLine("\n Number of comparison: " + ctr);
-                Console.Write("n\Continue search (y/n):");
+                Console.Write("\nContinue search (y/n):");
                 ch = char.Parse(Console.ReadLine().ToUpper());
             } while ((ch == 'y'));
         }
@@ -127,11 +127,40 @@ namespace SearchAlgorithm
                     Console.WriteLine("3.Exit");
                     Console.Write("Enter your choice (1,2,3) : ");
                     pilihanmenu = Convert.ToInt32(Console.ReadLine());
-                    
-
+                    switch (pilihanmenu)
+                    {
+                        case 1:
+                            Console.WriteLine("");
+                            Console.WriteLine("..................");
+                            Console.WriteLine("Linear Search");
+                            Console.WriteLine("..................");
+                            myList.input();
+                            myList.LinearSearch();
+                            break;
+                        case 2:
+                            Console.WriteLine("");
+                            Console.WriteLine("..................");
+                            Console.WriteLine("Binary Search");
+                            Console.WriteLine("..................");
+                            myList.input();
+                            myList.BinarySearch();
+                            break;
+                        case 3:
+                            Console.WriteLine("exit");
+                            break;
+                        default:
+                            Console.WriteLine("Error");
+                            break;
                     }
+                    Console.WriteLine("\nPilih Menu Lagi? (y/n) :");
+                    ch = char.Parse(Console.ReadLine().ToLower());
+                    Console.Clear();
+                } while (ch == 'y');
 
-                
+                // to exit from the console
+                Console.WriteLine("\n\nPress Return to exit, ");
+                Console.ReadLine();
+            } while (pilihanmenu != 3);              
         }
     }
 }
